@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+
+# Local
+.env
+*.env
+
+# Data/Artifacts
+cache/
+logs/
+.data/
+
+# VCS
+.git/
+.gitignore
+
+# OS
+.DS_Store

@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  bot:
+    build: .
+    image: job_connect_bot:latest
+    container_name: Job_ConnectBot
+    working_dir: /opt/Job_ConnectBot
+    env_file:
+      - .env
+    restart: unless-stopped
+    volumes:
+      - bot_data:/opt/Job_ConnectBot/data
+      - bot_cache:/opt/Job_ConnectBot/cache
+      - bot_logs:/opt/Job_ConnectBot/logs
+
+volumes:
+  bot_data:
+  bot_cache:
+  bot_logs:

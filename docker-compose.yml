@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  bot:
+    build: .
+    container_name: Job_ConnectBot
+    working_dir: /opt/Job_ConnectBot
+    volumes:
+      - .:/opt/Job_ConnectBot
+    env_file:
+      - .env
+    restart: unless-stopped
